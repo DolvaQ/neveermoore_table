@@ -148,7 +148,7 @@ h2 {
 .table_head {
   word-break: break-word;
   color: #c97df9;
-	animation: pulseGlow 2s ease-in-out infinite;
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 .table_items {
   display: flex;
@@ -159,6 +159,35 @@ h2 {
   transition:
     opacity 0.4s ease,
     transform 0.4s ease;
+
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+}
+
+.table_items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table_items::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.table_items::-webkit-scrollbar-thumb {
+  background: #c97df9;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.table_items::-webkit-scrollbar-thumb:hover {
+  background: #b366e8;
+}
+
+.table_items {
+  scrollbar-width: thin;
+  scrollbar-color: #c97df9 rgba(255, 255, 255, 0.1);
 }
 
 .table_column:hover .table_items {
