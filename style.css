@@ -206,7 +206,7 @@ h2 {
   padding: 5px;
 }
 
-.table_item:not(.zero-item) {
+.table_item:not(.zero-item, .loading-item, .fail-item) {
   position: relative;
   display: inline-block;
   color: white;
@@ -218,7 +218,7 @@ h2 {
   transition: background-position 0.5s ease;
 }
 
-.table_item:not(.zero-item):hover {
+.table_item:not(.zero-item, .loading-item, .fail-item):hover {
   background-position: left bottom;
 }
 
@@ -249,7 +249,8 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.zero-item {
+.loading-item,
+.fail-item, .zero-item {
   cursor: default;
 }
 @keyframes pulseGlow {
