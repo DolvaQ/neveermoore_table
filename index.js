@@ -128,7 +128,7 @@ function init() {
     if (!isDataLoaded) {
       console.warn("Operation timed out");
       document.querySelectorAll(".loading-item").forEach((item) => {
-        item.textContent = "Не удалось загрузить данные, попробуйте позже";
+        item.textContent = "Что-то не загрузилось, попробуй потом(";
         item.className = "fail-item table_item";
       });
     }
